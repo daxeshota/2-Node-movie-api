@@ -7,6 +7,7 @@ const movieRoute = require("./routes/movies.route")
 const app = express()
 app.use(express.json())
 require("dotenv").config()
+require("./model/movies.model")
 
 
 mongoose.connect(process.env.MONGO_MOVIE_URL, {}).then(() => {
